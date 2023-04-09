@@ -1,0 +1,175 @@
+.product {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 47px;
+}
+
+.productImg {
+  display: flex;
+  flex-direction: column;
+  margin-right: 62.5px;
+}
+
+.productMain {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 32px;
+}
+
+.productThumbnails {
+  display: flex;
+  justify-content: space-between;
+  img:hover {
+    cursor: pointer;
+  }
+  img:first-child {
+    border: 1px solid #ff7e1b;
+  }
+}
+
+.thumbnail {
+  height: 88px;
+  width: 88px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0.75)
+  );
+}
+
+.productDesc {
+  margin-left: 62.5px;
+  width: 100%;
+  margin-top: 68px;
+  margin-bottom: 68px;
+  .companyTitle {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #ff7e1b;
+    margin-bottom: 27px;
+  }
+  .companySubtitle {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 48px;
+    text-align: left;
+    color: #1d2026;
+    width: 70%;
+    margin-bottom: 32px;
+  }
+  .productDescription {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 24px;
+    color: #69707d;
+    width: 70%;
+    text-align: left;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  width: 165px;
+  height: 68px;
+  margin-bottom: 32px;
+}
+
+.mainPrice {
+  .discountedPrice {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    color: #1d2026;
+  }
+  .originalPrice {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration-line: line-through;
+    color: #b6bcc8;
+  }
+}
+
+.discountPercent {
+  background: #ffeee2;
+  border-radius: 6px;
+  padding: 2px;
+  height: 35%;
+  margin-top: 3px;
+  .percentDis {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ff7e1b;
+  }
+}
+
+.productBtns {
+  display: flex;
+  .count {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .firstBtn {
+    display: flex;
+    justify-content: space-between;
+    background: #f6f8fd;
+    border-radius: 10px;
+    width: 157px;
+    height: 56px;
+    margin-right: 16px;
+    border: none;
+    outline: none;
+    align-items: center;
+    padding: 10px;
+    img:hover {
+      cursor: pointer;
+    }
+  }
+  .secondBtn {
+    display: flex;
+    text-align: center;
+    background: #ff7e1b;
+    box-shadow: 0px 20px 50px -20px #ff7e1b;
+    border-radius: 10px;
+    height: 56px;
+    width: 272px;
+    border: none;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+    }
+    .btnText {
+      font-family: 'Kumbh Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      margin-left: 16px;
+      color: #ffffff;
+    }
+  }
+}

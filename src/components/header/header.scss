@@ -1,0 +1,84 @@
+header {
+  height: 114px;
+  width: 100%;
+  margin-bottom: 90px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e4e9f2;
+}
+
+.headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  a {
+    text-decoration: none;
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #69707d;
+    padding: 44px 0;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+      border-bottom: 3px solid #ff7e1b;
+    }
+  }
+}
+
+.leftNav {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  .firstLink {
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 26px;
+    color: #000;
+  }
+}
+
+.rightNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10%;
+  height: 110px;
+  a {
+    padding: 42px 0;
+  }
+  .avatarLink {
+    padding: 28px 0;
+    position: relative;
+  }
+  .cartCount {
+    position: absolute;
+    top: 64px;
+    right: 280px;
+    border-radius: 15px;
+    background-color: #ff7e1b;
+    color: white;
+    height: 15px;
+    width: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}
+
+.linkCart {
+  height: 20px;
+  width: 21.82px;
+}
+
+.avatar {
+  height: 50px;
+  width: 50px;
+}
