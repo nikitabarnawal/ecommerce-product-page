@@ -1,20 +1,20 @@
 .product {
   display: flex;
   justify-content: space-between;
-  margin: 0px 47px;
+  margin: 0% 2%;
 }
 
 .productImg {
   display: flex;
   flex-direction: column;
-  margin-right: 62.5px;
+  margin-right: 5%;
 }
 
 .productMain {
   height: 100%;
   width: 100%;
   border-radius: 15px;
-  margin-bottom: 32px;
+  margin-bottom: 4%;
 }
 
 .productThumbnails {
@@ -29,8 +29,8 @@
 }
 
 .thumbnail {
-  height: 88px;
-  width: 88px;
+  height: 100%;
+  width: 20%;
   object-fit: cover;
   border-radius: 10px;
   background: linear-gradient(
@@ -41,10 +41,10 @@
 }
 
 .productDesc {
-  margin-left: 62.5px;
+  margin-left: 5%;
   width: 100%;
-  margin-top: 68px;
-  margin-bottom: 68px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   .companyTitle {
     font-family: 'Kumbh Sans';
     font-style: normal;
@@ -74,7 +74,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    margin-bottom: 24px;
+    margin-bottom: 6%;
     color: #69707d;
     width: 70%;
     text-align: left;
@@ -83,13 +83,12 @@
 
 .price {
   display: flex;
-  justify-content: space-between;
-  width: 165px;
-  height: 68px;
-  margin-bottom: 32px;
+  width: 100%;
+  margin-bottom: 6%;
 }
 
 .mainPrice {
+  margin-right: 3%;
   .discountedPrice {
     font-family: 'Kumbh Sans';
     font-style: normal;
@@ -106,15 +105,19 @@
     line-height: 26px;
     text-decoration-line: line-through;
     color: #b6bcc8;
+    margin-top: 3%;
+    text-align: left;
   }
 }
 
 .discountPercent {
+  height: 7%;
   background: #ffeee2;
   border-radius: 6px;
   padding: 2px;
-  height: 35%;
-  margin-top: 3px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2%;
   .percentDis {
     font-family: 'Kumbh Sans';
     font-style: normal;
@@ -122,6 +125,7 @@
     font-size: 16px;
     line-height: 20px;
     color: #ff7e1b;
+    display: inline-block;
   }
 }
 
@@ -173,3 +177,35 @@
     }
   }
 }
+
+@media screen and (max-width: 1306px) {
+  .product {
+    flex-direction: column;
+  }
+}
+// @media screen and (min-width: 954px) and (max-width: 1306px) {
+//   .leftNav {
+//     width: 60%;
+//   }
+//   .rightNav {
+//     width: 20%;
+//   }
+// }
+
+// @media screen and (max-width: 953px) {
+//   .leftNav {
+//     width: 70%;
+//   }
+//   .rightNav {
+//     width: 20%;
+//   }
+// }
+
+// @media screen and (max-width: 840px) {
+//   .productThumbnails {
+//     img {
+//       height: 50px;
+//       width: 50px;
+//     }
+//   }
+// }

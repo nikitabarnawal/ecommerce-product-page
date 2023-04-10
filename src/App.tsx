@@ -6,28 +6,31 @@ import Product from './components/product'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [addItemToCart, setAddItemToCart] = useState(false)
 
   const handleIncrement = () => setCount((count) => count + 1)
   const handleDecrement = () =>
     count === 0 ? 0 : setCount((count) => count - 1)
-  const handleItemDelete = () => setCount(0)
 
-  const handleShowCart = () => {
-    const el = document.querySelector<HTMLElement>('.cartContainer')!
-    el.style.display = 'block'
+  const handleItemDelete = () => {
+    setAddItemToCart(false)
+    setCount(0)
   }
+
+  const handleAddItemToCart = () => setAddItemToCart(true)
 
   return (
     <div className="App">
       <Header
         count={count}
         onItemDelete={handleItemDelete}
-        onAvatarClicked={handleShowCart}
+        showCart={addItemToCart}
+        setAddItemToCart={setAddItemToCart}
       />
       <Product
         onIncrement={handleIncrement}
         onDecrement={handleDecrement}
-        onItemAddToCart={handleShowCart}
+        onItemAddToCart={handleAddItemToCart}
         count={count}
       />
     </div>

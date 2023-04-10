@@ -57,7 +57,7 @@ const Product = (props: IncrementDecrementProps) => {
           <button
             type="button"
             className="secondBtn"
-            onClick={props.onItemAddToCart}
+            onClick={() => props.onItemAddToCart()}
           >
             <img src={iconCart} alt="iconCart" />
             <span className="btnText">Add to Cart</span>

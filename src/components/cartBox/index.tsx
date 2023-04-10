@@ -5,6 +5,7 @@ import iconDelete from '../../images/icon-delete.svg'
 type CartBoxProps = {
   count: number
   onItemDelete: () => void
+  showCart: boolean
 }
 
 const CartBox = (props: CartBoxProps) => {
@@ -12,7 +13,7 @@ const CartBox = (props: CartBoxProps) => {
   return (
     <div className="cartContainer">
       <div className="title">Cart</div>
-      {props.count ? (
+      {props.count && props.showCart ? (
         <>
           <div className="cartItems">
             <img src={iconProduct1} alt="iconProduct" />

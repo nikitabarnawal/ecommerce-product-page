@@ -13,13 +13,35 @@ root.render(
 )
 
 const hideDropdown = (e: any) => {
+  const target = e.target as Element
+
+  //handle for SidenavDropDown
   if (
-    e.target.className.includes('avatarLink') ||
-    e.target.parentElement.className.includes('avatarLink')
-  )
+    target.className.includes('leftNav') ||
+    target.parentElement?.className.includes('mobileNav')
+  ) {
     return
-  const el = document.querySelector<HTMLElement>('.cartContainer')!
-  el.style.display = 'none'
+  }
+
+  const mobileEl = document.querySelector<HTMLElement>('.mobileNav')!
+  if (mobileEl && getComputedStyle(mobileEl).display === 'block') {
+    const DesktopEl = document.querySelector<HTMLElement>('.leftNav')!
+    DesktopEl.style.display = 'none'
+  }
+
+  //handle for cartDropDown
+  if (
+    target.className.includes('linkCart') ||
+    target.className.includes('cartCount') ||
+    target.className.includes('imgCartContainer')
+  ) {
+    return
+  }
+
+  const cartEl = document.querySelector<HTMLElement>('.cartContainer')!
+  if (cartEl && getComputedStyle(cartEl)?.display === 'block') {
+    cartEl.style.display = 'none'
+  }
 }
 
 document.getElementById('root')!.addEventListener('click', hideDropdown)
