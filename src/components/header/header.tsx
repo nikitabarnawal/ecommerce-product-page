@@ -2,7 +2,7 @@ import { MouseEvent } from 'react'
 import { Link } from 'react-router-dom'
 import CartBox from '../cartBox'
 import cart from '../../images/icon-cart.svg'
-import avatar from '../../images/image-avatar.png'
+import avatar from '../../images/nikita.png'
 import hamburgerIcon from '../../images/hamburgerIcon.png'
 import './header.scss'
 
@@ -34,19 +34,19 @@ const Header = (props: HeaderProps) => {
             <img src={hamburgerIcon} alt="mobileHamburger" />
           </div>
           <div className="leftNav">
-            <Link to="/sneakers" className="firstLink">
+            <Link to="/" className="firstLink">
               sneakers
             </Link>
 
-            <Link to="/collections">Collections</Link>
+            <Link to="/">Collections</Link>
 
-            <Link to="/Men">Men</Link>
+            <Link to="/">Men</Link>
 
-            <Link to="/Women">Women</Link>
+            <Link to="/">Women</Link>
 
-            <Link to="/About">About</Link>
+            <Link to="/">About</Link>
 
-            <Link to="/Contact">Contact</Link>
+            <Link to="/">Contact</Link>
           </div>
           <div className="rightNav">
             <Link to="/cart" className="imgCart" onClick={handleShowCart}>

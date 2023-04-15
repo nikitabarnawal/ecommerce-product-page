@@ -1,5 +1,9 @@
 import './product.scss'
+import { useState } from 'react'
 import product1 from '../../images/image-product-1.jpg'
+import product2 from '../../images/image-product-2.jpg'
+import product3 from '../../images/image-product-3.jpg'
+import product4 from '../../images/image-product-4.jpg'
 import thumbnail1 from '../../images/image-product-1-thumbnail.jpg'
 import thumbnail2 from '../../images/image-product-2-thumbnail.jpg'
 import thumbnail3 from '../../images/image-product-3-thumbnail.jpg'
@@ -16,15 +20,61 @@ type IncrementDecrementProps = {
 }
 
 const Product = (props: IncrementDecrementProps) => {
+  const [imageIndex, setImageIndex] = useState(1)
+
+  const handleProduct = (productId: number) => {
+    if (productId === 1) {
+      setImageIndex(1)
+    }
+    if (productId === 2) {
+      setImageIndex(2)
+    }
+    if (productId === 3) {
+      setImageIndex(3)
+    }
+    if (productId === 4) {
+      setImageIndex(4)
+    }
+  }
+
+  const productImage =
+    imageIndex === 1
+      ? product1
+      : imageIndex === 2
+      ? product2
+      : imageIndex === 3
+      ? product3
+      : product4
+
   return (
     <div className="product">
       <div className="productImg">
-        <img src={product1} className="productMain" alt="productImg" />
+        <img src={productImage} className="productMain" alt="productImg" />
         <div className="productThumbnails">
-          <img src={thumbnail1} className="thumbnail 1" alt="thumbnail1" />
-          <img src={thumbnail2} className="thumbnail 2" alt="thumbnail2" />
-          <img src={thumbnail3} className="thumbnail 3" alt="thumbnail3" />
-          <img src={thumbnail4} className="thumbnail 4" alt="thumbnail4" />
+          <img
+            src={thumbnail1}
+            className={`thumbnail 1 ${imageIndex === 1 ? 'clicked' : ''}`}
+            alt="thumbnail1"
+            onClick={() => handleProduct(1)}
+          />
+          <img
+            src={thumbnail2}
+            className={`thumbnail 2 ${imageIndex === 2 ? 'clicked' : ''}`}
+            alt="thumbnail2"
+            onClick={() => handleProduct(2)}
+          />
+          <img
+            src={thumbnail3}
+            className={`thumbnail 3 ${imageIndex === 3 ? 'clicked' : ''}`}
+            alt="thumbnail3"
+            onClick={() => handleProduct(3)}
+          />
+          <img
+            src={thumbnail4}
+            className={`thumbnail 4 ${imageIndex === 4 ? 'clicked' : ''}`}
+            alt="thumbnail4"
+            onClick={() => handleProduct(4)}
+          />
         </div>
       </div>
       <div className="productDesc">
